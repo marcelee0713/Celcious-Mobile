@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="275dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/secondary"
+    app:cardCornerRadius="5dp">
+    <RelativeLayout
+        android:id="@+id/set_track_number_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Enter the tracking number of this parcel."
+            android:textAlignment="center"
+            android:textColor="@color/accent"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tracking_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/description"
+            android:backgroundTint="@color/accent"
+            android:fontFamily="@font/robotoregular"
+            android:hint="Enter tracking number"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/accent"
+            android:textColorHint="#323232" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tracking_number_input"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:id="@+id/user_press_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="28dp"
+                android:backgroundTint="@color/accent"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf00c"
+                android:textColor="@color/secondary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/user_press_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="24dp"
+                android:layout_toRightOf="@id/user_press_yes"
+                android:backgroundTint="@color/accent"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="X"
+                android:textColor="@color/secondary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/user_press_yes"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

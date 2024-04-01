@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_cart"
+    android:background="@color/primary"
+    tools:context=".CartActivity">
+
+    <RelativeLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@color/secondary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/nav_home_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf015"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_cart_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_home_container"
+                android:background="@color/primary">
+
+                <TextView
+                    android:id="@+id/nav_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf07a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_shipments_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_cart_container">
+
+                <TextView
+                    android:id="@+id/nav_shipments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf0d1"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_about_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_shipments_container">
+
+                <TextView
+                    android:id="@+id/nav_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf05a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_help_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_about_container">
+
+                <TextView
+                    android:id="@+id/nav_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf059"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_reviews_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_help_container">
+
+                <TextView
+                    android:id="@+id/nav_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf005"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nav_bar">
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp">
+
+            <RelativeLayout
+                android:id="@+id/cart_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/cart_header_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/inconsolatabold"
+                    android:letterSpacing="0.4"
+                    android:text="CART"
+                    android:textColor="@color/accent"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cart_buttons_container"
+                android:layout_width="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cart_container"
+                android:layout_marginBottom="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/cart_remove_all_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/cart_remove_all_button"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/secondary"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="REMOVE ALL"
+                        android:textColor="@color/accent"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/cart_add_all_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <Button
+                        android:id="@+id/cart_add_all_button"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:backgroundTint="@color/secondary"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="ADD ALL"
+                        android:textColor="@color/accent"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/cart_checkout_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true">
+
+                    <Button
+                        android:id="@+id/cart_checkout_button"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/secondary"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Checkout"
+                        android:textColor="@color/accent"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cart_recycler_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cart_buttons_container">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cart_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/no_item_in_cart_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Your cart is currently empty."
+                    android:textColor="@color/accent" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

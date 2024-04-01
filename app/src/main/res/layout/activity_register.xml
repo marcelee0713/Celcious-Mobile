@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="20dp"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:id="@+id/scrollable_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/icon" />
+
+            <RelativeLayout
+                android:id="@+id/intro_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="32dp">
+
+                <TextView
+                    android:id="@+id/header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inconsolatabold"
+                    android:letterSpacing="0.6"
+                    android:text="CELCIOUS"
+                    android:textColor="@color/accent"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/subtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/header_title"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Create Account"
+                    android:textColor="@color/accent"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/create_account_input_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro_container"
+                android:layout_marginBottom="24dp">
+
+                <EditText
+                    android:id="@+id/ca_username_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/accent"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/accent"
+                    android:textColorHint="#323232" />
+
+                <EditText
+                    android:id="@+id/ca_email_address_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ca_username_input"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/accent"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@color/accent"
+                    android:textColorHint="#323232" />
+
+                <EditText
+                    android:id="@+id/ca_password_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ca_email_address_input"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/accent"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@color/accent"
+                    android:textColorHint="#323232" />
+
+                <EditText
+                    android:id="@+id/ca_confirm_password_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ca_password_input"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:backgroundTint="@color/accent"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="Confirm Password"
+                    android:textColor="@color/accent"
+                    android:textColorHint="#323232" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/create_account_button"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@id/create_account_input_container"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/secondary"
+                android:fontFamily="@font/inconsolatabold"
+                android:letterSpacing="0.5"
+                android:text="CREATE ACCOUNT"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/account_info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/create_account_button"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/robotoregular"
+                android:text="Already have an account?"
+                android:textColor="@color/accent"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/account_log_in_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/account_info_text"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/robotoregular"
+                android:text="Log in"
+                android:textColor="@color/accent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            
+            <ProgressBar
+                android:id="@+id/register_progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:indeterminateTint="@color/accent"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

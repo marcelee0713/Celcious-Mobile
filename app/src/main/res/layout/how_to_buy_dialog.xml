@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="275dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/secondary"
+    app:cardCornerRadius="5dp">
+    <ScrollView
+        android:id="@+id/shipment_dialog_container"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/htb_navigation_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/navigation_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Where's the navigation?"
+                    android:textColor="@color/accent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/close_how_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="X"
+                    android:textColor="@color/accent"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/home_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/navigation_title">
+
+                    <TextView
+                        android:id="@+id/home_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf015"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/home_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/home_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="This is Home. It's where the products are and also an information about the application."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/cart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/home_container">
+
+                    <TextView
+                        android:id="@+id/cart_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf07a"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/cart_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/cart_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="This is Cart. Your items are stored in there when you add a product to your cart. It's also where you can checkout in order to buy the item."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shipments_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/cart_container">
+
+                    <TextView
+                        android:id="@+id/shipments_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf0d1"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/shipment_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/shipments_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="This is Shipments. The items you bought for COD and Meet ups are here. You can cancel an item anytime, but when it is shipped. You can not cancel it anymore."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/about_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/shipments_container">
+
+                    <TextView
+                        android:id="@+id/about_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf05a"
+                        android:textColor="@color/accent"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/about_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/about_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="This is About. It is the information about the business and application. And also getting to know who's the Developer."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/help_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/about_container">
+
+                    <TextView
+                        android:id="@+id/help_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf059"
+                        android:textColor="@color/accent"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/help_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/help_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="This is Help. Where you can ask questions and concerns about your product or my application. And also, where the questions and answers about the business."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/user_reviews_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/help_container">
+
+                    <TextView
+                        android:id="@+id/user_reviews_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf005"
+                        android:textColor="@color/accent"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/user_reviews_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/user_reviews_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="This is Reviews. Where you can see all of the user reviews on what they think about our products."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/logout_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/user_reviews_container">
+
+                    <TextView
+                        android:id="@+id/logout_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf2f5"
+                        android:textColor="@color/accent"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/logout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/logout_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="This is Log out. Where you can log out your account. This can be only seen in the Home page."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/htb_how_to_buy_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/htb_navigation_container">
+
+                <TextView
+                    android:id="@+id/how_to_buy_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotoregular"
+                    android:layout_marginBottom="8dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/accent"
+                    android:text="How do I buy?"/>
+
+                <RelativeLayout
+                    android:id="@+id/press_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/how_to_buy_text">
+
+                    <TextView
+                        android:id="@+id/press_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf217"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/press_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/press_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Press this icon below the product in order to add it in your cart."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gotoCart_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/press_container">
+
+                    <TextView
+                        android:id="@+id/goToCart_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf07a"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/gotoCart_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/goToCart_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="After adding items to your cart. Go to cart in order to see your items that are waiting to be checked out."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/threebuttons_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/gotoCart_container">
+
+                    <TextView
+                        android:id="@+id/threebuttons_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf071"
+                        android:textColor="@color/accent"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/threebuttons_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/threebuttons_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Note: There are three buttons you'll see. REMOVE ALL is for removing all the checkboxes, ADD ALL is for adding all the checkboxes, and CHECKOUT is for checking out at least one item."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/checkout_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/threebuttons_container">
+
+                    <TextView
+                        android:id="@+id/checkout_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf09d"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/checkout_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/checkout_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="If you're done checking an item. You'll see your items that are ready to be bought and the essential information in order to buy."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/goToShipment_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@id/checkout_container">
+
+                    <TextView
+                        android:id="@+id/goToShipment_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf0d1"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/goToShipment_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/goToShipment_icon"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Once putting all the information. You'll go to the Shipments Page and that's where your bought items are stored and if your payment method is COD. The tracking number will be provided soon."
+                        android:textColor="@color/accent" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/other_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goToShipment_container"
+                    android:layout_centerHorizontal="true"
+                    android:text="You can not return/refund a parcel if a week have been passed and if you damaged it.\n\nIf your payment method is COD, you'll see 2 buttons. If you are contented and satisfied. Press DELIVERED in order to finish the transaction.\nIf there are some problems regarding your shipment please press RETURN/FUND in order to discuss your parcel."
+                    android:textAlignment="center"
+                    android:textColor="@color/accent" />
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/finished_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/other_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="After that, when your item is delivered or our transaction done. Press the Done in the Shipments so you can see all of your bought products. Don't forget to write a review!"
+                    android:textAlignment="center"
+                    android:textColor="@color/accent" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "992011485729",
+    "firebase_url": "https://celcious-6924f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "celcious-6924f",
+    "storage_bucket": "celcious-6924f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992011485729:android:88c3234544c4a4bc2d1960",
+        "android_client_info": {
+          "package_name": "com.example.celcious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992011485729-87rgc21kthteaqvbq5nj3rh2ulsg3rt3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVQllx2dANmETgM6NbPlIih3ppoTPmjJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992011485729-87rgc21kthteaqvbq5nj3rh2ulsg3rt3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

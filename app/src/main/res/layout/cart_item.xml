@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/cart_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱299"
+            android:textSize="16sp"
+            android:textColor="@color/accent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inStockContainer"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_price"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/cart_instock_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In stock: "
+                android:textColor="@color/accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cart_inStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cart_instock_text"
+                android:text="1"
+                android:textColor="@color/accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cart_instock_text"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cart_remove_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:backgroundTint="#2b2b2b"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf2ed"
+                android:textColor="@color/accent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cart_product_checkbox"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cart_inStock"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/cart_product_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:text="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/cart_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/inStockContainer"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/tshirttest" />
+
+        <TextView
+            android:id="@+id/cart_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cart_image"
+            android:layout_centerHorizontal="true"
+            android:text="Lost in Space"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/quantity_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cart_name">
+            <TextView
+                android:id="@+id/cart_quantity_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/accent"
+                android:layout_centerHorizontal="true"
+                android:text="Quantity"/>
+            <RelativeLayout
+                android:id="@+id/cart_quantity_options_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cart_quantity_header">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cartSubtractQuantityBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#2b2b2b"
+                    android:textColor="#DEDEDE"
+                    android:text="-"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/cart_quantity_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cartSubtractQuantityBtn"
+                    android:textColor="@color/accent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:text="1"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/cartAddQuantityBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@id/cart_quantity_count"
+                    android:backgroundTint="#2b2b2b"
+                    android:textColor="#DEDEDE"
+                    android:text="+"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_cart"
+    android:background="@color/primary"
+    tools:context=".CheckoutActivity">
+
+    <RelativeLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@color/secondary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/nav_home_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf015"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_cart_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_home_container">
+
+                <TextView
+                    android:id="@+id/nav_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf07a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_shipments_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_cart_container">
+
+                <TextView
+                    android:id="@+id/nav_shipments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf0d1"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_about_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_shipments_container">
+
+                <TextView
+                    android:id="@+id/nav_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf05a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_help_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_about_container">
+
+                <TextView
+                    android:id="@+id/nav_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf059"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_reviews_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_help_container"
+                android:background="@color/primary">
+
+                <TextView
+                    android:id="@+id/nav_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf005"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nav_bar">
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <RelativeLayout
+                android:id="@+id/checkout_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/checkout_header_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/inconsolatabold"
+                    android:letterSpacing="0.4"
+                    android:textAlignment="center"
+                    android:text="RATE"
+                    android:textColor="@color/accent"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkout_container"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/ask_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text=" Tell us what you feel about our product!\nPosting inappropriate pictures will get you permanently banned."
+                    android:textAlignment="center"
+                    android:textColor="@color/accent"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/upload_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/secondary"
+                android:padding="10dp"
+                android:layout_below="@id/description">
+
+                <RelativeLayout
+                    android:id="@+id/rating_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/rating_star_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf005"
+                        android:textColor="@color/primary"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/rating_star_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@id/rating_star_1"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf005"
+                        android:textColor="@color/primary"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/rating_star_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@id/rating_star_2"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf005"
+                        android:textColor="@color/primary"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/rating_star_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@id/rating_star_3"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf005"
+                        android:textColor="@color/primary"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/rating_star_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_toRightOf="@id/rating_star_4"
+                        android:fontFamily="@font/fontawesomefreesolid"
+                        android:text="\uf005"
+                        android:textColor="@color/primary"
+                        android:textSize="30sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/currentlyHeaderText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rating_container"
+                    android:text="You are currently reviewing"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/accent"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/boughItemText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/currentlyHeaderText"
+                    android:layout_centerHorizontal="true"
+                    android:text="Item name"
+                    android:textAlignment="center"
+                    android:textColor="@color/accent"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/rating_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/boughItemText"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary"
+                    android:hint="Enter your message..."
+                    android:inputType="textMultiLine"
+                    android:maxLines="4"
+                    android:textColor="@color/accent"
+                    android:textColorHint="#323232" />
+
+                <ImageView
+                    android:id="@+id/rating_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@id/rating_message" />
+
+                <ProgressBar
+                    android:id="@+id/review_progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rating_image"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                <RelativeLayout
+                    android:id="@+id/rating_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/review_progress_bar">
+
+                    <Button
+                        android:id="@+id/select_image_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:backgroundTint="@color/primary"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="IMAGE" />
+                    <Button
+                        android:id="@+id/upload_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/select_image_btn"
+                        android:fontFamily="@font/robotoregular"
+                        android:backgroundTint="@color/primary"
+                        android:text="UPLOAD"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

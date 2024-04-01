@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/secondary"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/messages_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent"
+            android:text="userFullName"/>
+
+        <TextView
+            android:id="@+id/messages_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messages_full_name"
+            android:layout_marginBottom="5dp"
+            android:text="userEmail"
+            android:autoLink="email"
+            android:textColor="@color/accent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/messages_qc_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messages_email"
+            android:layout_marginBottom="5dp"
+            app:contentPadding="5dp"
+            android:backgroundTint="@color/primary">
+            <TextView
+                android:id="@+id/messages_qc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                android:textColor="@color/accent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/messages_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messages_qc_container"
+            android:layout_marginBottom="5dp"
+            android:text="userSentTime"
+            android:textColor="@color/accent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messages_time"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/robotoregular"
+            android:text="DELETE"
+            android:textColor="@color/accent" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

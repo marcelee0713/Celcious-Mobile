@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_cart"
+    android:background="@color/primary"
+    tools:context=".CheckoutActivity">
+
+    <RelativeLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@color/secondary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/nav_home_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf015"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_cart_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_home_container">
+
+                <TextView
+                    android:id="@+id/nav_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf07a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_shipments_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_cart_container">
+
+                <TextView
+                    android:id="@+id/nav_shipments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf0d1"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_about_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_shipments_container">
+
+                <TextView
+                    android:id="@+id/nav_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf05a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_help_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_about_container">
+
+                <TextView
+                    android:id="@+id/nav_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf059"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_reviews_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_help_container"
+                android:background="@color/primary">
+
+                <TextView
+                    android:id="@+id/nav_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf005"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_user_reviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/nav_bar">
+
+        <ScrollView
+            android:id="@+id/scrollable_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/checkout_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/checkout_header_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/inconsolatabold"
+                        android:letterSpacing="0.4"
+                        android:text="REVIEWS"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/user_reviews_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/checkout_container">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/user_reviews_recycler_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:id="@+id/no_item_in_user_reviews_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="There are no reviews here currently."
+                        android:textColor="@color/accent" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

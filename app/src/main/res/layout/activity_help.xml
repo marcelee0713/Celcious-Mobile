@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_home"
+    android:background="@color/primary"
+    tools:context=".Help">
+
+
+    <RelativeLayout
+        android:id="@+id/nav_bar"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@color/secondary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/nav_home_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/nav_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf015"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_cart_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_home_container">
+
+                <TextView
+                    android:id="@+id/nav_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf07a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_shipments_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_cart_container">
+
+                <TextView
+                    android:id="@+id/nav_shipments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf0d1"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_about_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_shipments_container">
+
+                <TextView
+                    android:id="@+id/nav_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf05a"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_help_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_about_container"
+                android:background="@color/primary">
+
+                <TextView
+                    android:id="@+id/nav_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf059"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nav_reviews_container"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nav_help_container">
+
+                <TextView
+                    android:id="@+id/nav_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="28dp"
+                    android:fontFamily="@font/fontawesomefreesolid"
+                    android:text="\uf005"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollable_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nav_bar">
+
+        <RelativeLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <RelativeLayout
+                android:id="@+id/help_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+
+                <TextView
+                    android:id="@+id/help_header_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/inconsolatabold"
+                    android:letterSpacing="0.4"
+                    android:text="HELP"
+                    android:textColor="@color/accent"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/q_or_c_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/help_container">
+                <RelativeLayout
+                    android:id="@+id/q_or_c_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/q_or_c_header_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Have a question or concern?"
+                        android:textColor="@color/accent"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/q_or_c_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/q_or_c_header">
+
+                    <EditText
+                        android:id="@+id/q_or_c_fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/accent"
+                        android:hint="Full name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/accent"
+                        android:textColorHint="#4e4e4e"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/q_or_c_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/q_or_c_fullName"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/accent"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="@color/accent"
+                        android:textColorHint="#4e4e4e"
+                        android:textSize="16sp" />
+
+                    <ScrollView
+                        android:id="@+id/q_or_c_textarea_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/q_or_c_email">
+
+                        <EditText
+                            android:id="@+id/q_or_c_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/accent"
+                            android:hint="Enter your message..."
+                            android:inputType="textMultiLine"
+                            android:maxLines="4"
+                            android:textColor="@color/accent"
+                            android:textColorHint="#4e4e4e"
+                            android:textSize="16sp" />
+                    </ScrollView>
+
+                    <Button
+                        android:id="@+id/q_or_c_submit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/q_or_c_textarea_container"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/secondary"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="SUBMIT"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/q_and_a_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/q_or_c_form">
+
+                    <RelativeLayout
+                        android:id="@+id/q_and_a_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/robotoregular"
+                            android:text="Questions and Answers"
+                            android:textColor="@color/accent"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/q_and_a_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/q_and_a_header">
+
+                        <RelativeLayout
+                            android:id="@+id/info_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_1_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="What are the sizes of your T-Shirts?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_1_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_1_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="All of them are medium and the reason is that, most people wear medium sized t-shirts. "
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/info_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/info_1"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_2_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="What is the quality of your t-shirts?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_2_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_2_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="They are 100% cotton, thick, and comfortable."
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/info_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/info_2"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_3_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="What are the designs of your t-shirts?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_3_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_3_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="The design of t-shirts are versatile. Either aesthetic, minimal, simple, and pop culture design."
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/info_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/info_3"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_4_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="What company is your courier service?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_4_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_4_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="LBC Express.\nNCR - 1-2 days\nNorth/South Luzon - 1-2 days\nVisayas - 3-5 days\nMindanao - 4-6 days"
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/info_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/info_4"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_5_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="How much is the shipping fee?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_5_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_5_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="Luzon ₱175\nNCR ₱165\nVisayas ₱180\nMindanao ₱180\nValuation Fee is ₱15 and it's included."
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/info_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/info_5"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_6_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="What time and where are we meeting up?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_6_01_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_6_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="1. Wednesday or Thursday, 11:00am - 12:00pm, Inside McDonald's, PHINMA University of Pangasinan, Dagupan City, Pangasinan"
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                            <TextView
+                                android:id="@+id/info_6_02_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_6_01_answer"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="2. Saturday, 1:00pm - 2:00pm, Food court on 2nd Floor, Robinsons Place Pangasinan, McArthur Highway, Calasiao, Pangasinan"
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                            <TextView
+                                android:id="@+id/info_6_03_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_6_02_answer"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="3. Sunday, 4:00pm - 5:00pm, Food court in Public Plaza, Poblacion Norte, Public Plaza, Santa Barbara, Pangasinan"
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/info_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/info_6"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_7_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="What if I did not show up to our meet up?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_7_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_7_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="I'm going to cancel your item(s). Always be in time."
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/info_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/info_7"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:id="@+id/info_8_question"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="How can I put my own design?"
+                                android:textColor="@color/accent"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/info_8_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/info_8_question"
+                                android:fontFamily="@font/robotoregular"
+                                android:text="We have to negotiate first, because the price depends on how many pixels are printed. Send me your facebook name or url at my email magbualmarcel@gmail.com"
+                                android:textColor="@color/accent"
+                                android:textSize="13sp"
+                                android:textStyle="italic" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

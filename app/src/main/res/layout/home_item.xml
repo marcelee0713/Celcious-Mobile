@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/primary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/home_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱299"
+            android:textColor="@color/accent"
+            android:textSize="16sp" />
+        <RelativeLayout
+            android:id="@+id/inStockContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_price"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/home_in_stock_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/accent"
+                android:text="In stock: " />
+
+            <TextView
+                android:id="@+id/in_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/home_in_stock_text"
+                android:textColor="@color/accent"
+                android:text="1" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/home_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/inStockContainer"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/tshirttest" />
+
+        <TextView
+            android:id="@+id/home_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_image"
+            android:layout_centerHorizontal="true"
+            android:text="Lost in Space"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/quantity_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/home_product_name">
+
+            <TextView
+                android:id="@+id/quantity_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/accent"
+                android:text="Quantity" />
+            <RelativeLayout
+                android:id="@+id/quantity_options_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quantity_header">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/subtractQuantityBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="8dp"
+                    android:backgroundTint="#2b2b2b"
+                    android:textColor="#DEDEDE"
+                    android:text="-"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/quantity_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/subtractQuantityBtn"
+                    android:text="1"
+                    android:textColor="@color/accent" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addQuantityBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@id/quantity_count"
+                    android:backgroundTint="#2b2b2b"
+                    android:textColor="#DEDEDE"
+                    android:text="+"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/home_add_to_cart_button"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quantity_container"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#2b2b2b"
+            android:fontFamily="@font/fontawesomefreesolid"
+            android:text="\uf217"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

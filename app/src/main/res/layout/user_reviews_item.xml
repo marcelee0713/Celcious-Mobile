@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/secondary"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/user_name_user_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userName"
+            android:textColor="@color/accent"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/bought_items_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@id/user_name_user_reviews">
+
+            <TextView
+                android:id="@+id/bought_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bought: "
+                android:textColor="@color/accent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/bought_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/bought_header"
+                android:text="item user bought"
+                android:textColor="@color/accent"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/options_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/like_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/fontawesomefreeregular"
+                android:text="\uf164"
+                android:textColor="@color/accent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/like_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/like_btn"
+                android:fontFamily="@font/robotoregular"
+                android:text="0"
+                android:textColor="@color/accent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/remove_user_review_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/like_counter"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf2ed"
+                android:textColor="@color/accent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/comment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/remove_user_review_item"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf4ad"
+                android:textColor="@color/accent"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rating_container_user_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bought_items_container"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/rating_star_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf005"
+                android:textColor="@color/primary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/rating_star_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/rating_star_1"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf005"
+                android:textColor="@color/primary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/rating_star_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/rating_star_2"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf005"
+                android:textColor="@color/primary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/rating_star_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/rating_star_3"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf005"
+                android:textColor="@color/primary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/rating_star_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@id/rating_star_4"
+                android:fontFamily="@font/fontawesomefreesolid"
+                android:text="\uf005"
+                android:textColor="@color/primary"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/message_user_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_container_user_reviews"
+            android:layout_marginBottom="8dp"
+            android:text="Hey this is just a testing text. So I will say Lorem ipsum."
+            android:textColor="@color/accent" />
+
+        <ImageView
+            android:id="@+id/image_user_reviews"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/message_user_reviews"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/date_user_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_user_reviews"
+            android:text="date"
+            android:textColor="@color/accent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comments_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/date_user_reviews"
+            android:layout_marginTop="8dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

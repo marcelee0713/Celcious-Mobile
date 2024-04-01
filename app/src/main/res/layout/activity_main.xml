@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/icon" />
+
+    <RelativeLayout
+        android:id="@+id/intro_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inconsolatabold"
+            android:letterSpacing="0.6"
+            android:text="CELCIOUS"
+            android:textColor="@color/accent"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/subtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_title"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/robotoregular"
+            android:text="Log in to continue."
+            android:textColor="@color/accent"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/log_in_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro_container"
+        android:layout_marginBottom="24dp">
+
+        <EditText
+            android:id="@+id/email_address_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/accent"
+            android:fontFamily="@font/robotoregular"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/accent"
+            android:textColorHint="#323232" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email_address_input"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:backgroundTint="@color/accent"
+            android:fontFamily="@font/robotoregular"
+            android:hint="Password"
+            android:textColor="@color/accent"
+            android:textColorHint="#323232" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/log_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@id/log_in_input_container"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/secondary"
+        android:fontFamily="@font/inconsolatabold"
+        android:letterSpacing="0.6"
+        android:text="LOGIN"
+        android:textSize="32sp" />
+
+    <RelativeLayout
+        android:id="@+id/account_options_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/log_in_button">
+
+        <TextView
+            android:id="@+id/forgot_password_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/accent"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/create_account_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:text="Create an account"
+            android:textColor="@color/accent"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/log_in_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/accent"/>
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/secondary"
+    app:cardCornerRadius="5dp">
+    <RelativeLayout
+        android:id="@+id/product_pop_up_dialog_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/pop_up_image"
+            android:layout_width="250dp"
+            android:layout_height="275dp"
+            android:src="@drawable/tshirttest" />
+
+        <TextView
+            android:id="@+id/pop_up_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pop_up_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:text="Product Name"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sizes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pop_up_name"
+            android:text="Size: Medium Asian Size"
+            android:textColor="@color/accent" />
+
+        <TextView
+            android:id="@+id/quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sizes"
+            android:textColor="@color/accent"
+            android:text="Material: 100% Cotton"/>
+
+        <TextView
+            android:id="@+id/collar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quality"
+            android:textColor="@color/accent"
+            android:text="Collar: Round Neck"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
